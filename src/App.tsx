@@ -6,17 +6,19 @@ import Hobbies from './Hobbies';
 import Projects from './Projects';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>My Portfolio</h1>
-      </header>
-      <main>
         <AboutMe />
         <Education />
         <Hobbies />
         <Projects />
+      <header/>
+      <h1>My Portfolio</h1>
+      </header>
+      <main>
       </main>
     </div>
   );
