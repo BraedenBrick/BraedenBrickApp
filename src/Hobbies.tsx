@@ -5,9 +5,9 @@ const Hobbies: React.FC = () => {
         <section>
             <h2>Hobbies</h2>
             <ul>
-                <li>Guitar</li>
-                <li>Running</li>
-                <li>Gaming</li>
+            <li>Guitar</li>
+            <li>Running</li>
+            <li>Gaming</li>
             </ul>
         </section>
     );
