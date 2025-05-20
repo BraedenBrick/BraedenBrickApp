@@ -21,7 +21,7 @@ const initialState: PortfolioState = {
 };
 
 export const fetchProjects = createAsyncThunk('portfolio/fetchProjects', async () => {
-    const response = await axios.get('/api/data');
+    const response = await axios.get('https://braedenbrickapp.onrender.com//api/data');
     return response.data;
 });
 
