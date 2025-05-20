@@ -1,38 +1,79 @@
+/* ChatGPT helped with some CSS. I had an idea for adding a spinning brick in the back
+instead of the react image but for some reason the file was corrupted or something.
+I've spent way to long trying to get it work but it will not for some reason. */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* App container */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
+  color: #121212;
   min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Header section */
+.App-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+/* Heading styling */
+.App-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Toggle button styles */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  border: 2px solid currentColor;
+  background-color: transparent;
+  color: inherit;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effects for light mode */
+.App:not(.dark) .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #000000;
+  border-color: #000000;
+}
+
+/* Button and text in dark mode */
+.App.dark .theme-toggle {
+  color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+.App.dark .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: #ffffff;
 }
